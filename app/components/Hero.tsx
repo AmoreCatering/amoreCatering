@@ -41,7 +41,7 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover object-center"
       />
       <div className="absolute inset-0 bg-foreground/50" />
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 relative z-10">
+      <div className="max-w-350 mx-auto px-6 md:px-12 lg:px-20 relative z-10">
         <section className="max-w-2xl">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-background">
             Premium Catering i Stockholm
@@ -55,9 +55,9 @@ export default function Hero() {
             <Link
               href="#kontakt"
               onClick={() => handleClick('#kontakt')}
-              className="flex items-center bg-accent text-background font-medium text-center px-8 py-3 rounded uppercase hover:-translate-y-1 transition-all duration-300"
+              className="flex items-center bg-primary text-background font-medium text-center px-8 py-3 rounded uppercase hover:-translate-y-1 transition-all duration-300"
             >
-              Boka Catering
+              boka catering
             </Link>
             <Link
               href="https://order.foodtec.se/gamore-catering/bestall-mat"
