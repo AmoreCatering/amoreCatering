@@ -31,8 +31,8 @@ export default function About() {
           <div>
             <p className="mb-4 leading-relaxed text-foreground/80 text-sm md:text-base">
               Amore Catering startades med en vision att leverera premium
-              catering till Stockholm. Vi tror på hemlagad mat med
-              gourmet-känsla, där varje detalj spelar roll.
+              catering till Stockholm. Vi tror på hemlagad mat med gourmet
+              känsla, där varje detalj spelar roll.
             </p>
             <p className="mb-4 leading-relaxed text-foreground/80 text-sm md:text-base">
               Vårt team består av erfarna kockar med passion för matlagning. Vi

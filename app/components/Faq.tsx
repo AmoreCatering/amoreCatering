@@ -15,6 +15,14 @@ const faqs = [
     q: 'Kan ni servera maten på plats?',
     a: 'Ja, vi erbjuder både leverans och fullständig servering. Vi kan anpassa servicenivån till dina behov och budget.',
   },
+  {
+    q: 'Erbjuder ni leverans?',
+    a: 'Ja, vi erbjuder leverans inom tullarna för 199kr och 299kr utanför tullarna. Ifall du beställer för mer än 6500 blir leveransen gratis.',
+  },
+  {
+    q: 'Kostar det att avboka min beställning?',
+    a: 'Ja en avgift på 50% av totala beställningen tas vid avbokning inom 5 dagar av leverans/upphämtning.',
+  },
 ];
 
 export default function Faq() {
