@@ -24,7 +24,7 @@ export default function About() {
       className="py-12 md:py-16 border-t border-border bg-background"
     >
       <div className="max-w-350 mx-auto px-6 md:px-12 lg:px-20">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-accent">
+        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-primary">
           Om Amore Catering
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
@@ -46,7 +46,7 @@ export default function About() {
             </p>
           </div>
           <div className="rounded-lg p-4 md:p-8 border border-border bg-secondary">
-            <h3 className="text-lg md:text-xl font-bold mb-6 text-accent">
+            <h3 className="text-lg md:text-xl font-bold mb-6 text-primary">
               Vad vi erbjuder
             </h3>
             <div className="space-y-4 text-foreground/80 text-sm md:text-base">

@@ -21,7 +21,7 @@ export default function Home() {
       <Features />
       {/* Menu Section */}
       {/* <Menu /> */}
-      {/* <div className="w-full h-100 relative">
+      <div className="w-full h-100 relative">
         <Image
           src="/catering-divider.webp"
           alt="Premium Catering Background"
@@ -29,7 +29,7 @@ export default function Home() {
           fill
           className="object-cover object-center"
         />
-      </div> */}
+      </div>
       {/* About Section */}
       <About />
       <div className="w-full h-100 relative">

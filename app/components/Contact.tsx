@@ -55,7 +55,7 @@ export default function Contact() {
       id="kontakt"
       className="bg-background max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-20"
     >
-      <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-accent">
+      <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-primary">
         Boka Din Catering
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
@@ -64,7 +64,7 @@ export default function Contact() {
             Kontakta oss idag för att diskutera din event. Vi svarar snabbt och
             hjälper dig planera en perfekt meny som passa era behov och budget.
           </p>
-          <div className="space-y-4 text-sm md:text-base [&_h3]:text-accent [&_p]:text-foreground/80">
+          <div className="space-y-4 text-sm md:text-base [&_h3]:text-primary [&_p]:text-foreground/80">
             <section>
               <h3 className="font-semibold mb-1">Telefon</h3>
               <p>
@@ -77,17 +77,6 @@ export default function Contact() {
               </p>
             </section>
             <section>
-              <h3 className="font-semibold mb-1">E-post</h3>
-              <p>
-                <a
-                  href="mailto:info@gamorecatering.se"
-                  className="hover:text-accent-hover transition"
-                >
-                  info@gamorecatering.se
-                </a>
-              </p>
-            </section>
-            <section>
               <h3 className="font-semibold mb-1">Plats</h3>
               <p>Stockholm, Sverige</p>
             </section>
@@ -95,7 +84,7 @@ export default function Contact() {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="border border-border rounded-lg p-4 md:p-8 bg-secondary [&_input]:border-border [&_select]:border-border [&_textarea]:border-border [&_input]:w-full [&_input]:rounded [&_input]:px-4 [&_input]:py-2 [&_input]:bg-background [&_input]:text-foreground [&_input]:border [&_input]:focus:outline-none [&_input]:focus:border-accent [&_input]:text-sm"
+          className="border border-border rounded-lg p-4 md:p-8 bg-secondary [&_input]:border-border [&_select]:border-border [&_textarea]:border-border [&_input]:w-full [&_input]:rounded [&_input]:px-4 [&_input]:py-2 [&_input]:bg-background [&_input]:text-foreground [&_input]:border [&_input]:focus:outline-none [&_input]:focus:border-primary [&_input]:text-sm"
         >
           <div className="space-y-4">
             <div>
@@ -293,7 +282,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-2 md:py-3 rounded font-medium bg-accent text-background hover:bg-accent-hover transition text-sm md:text-base disabled:opacity-50 cursor-pointer"
+              className="w-full py-2 md:py-3 rounded font-medium bg-primary text-background hover:bg-accent-hover transition text-sm md:text-base disabled:opacity-50 cursor-pointer"
             >
               {loading ? 'Skickar...' : 'Skicka Förfrågan'}
             </button>
