@@ -42,10 +42,6 @@ export default function Footer() {
           >
             Högalidsgatan 13B, 117 30 Stockholm
           </a>
-
-          <a className="email" href="mailto:info@gamore.se">
-            info@gamore.se
-          </a>
           <a className="phone" href="tel:+08304270">
             08 30 42 70
           </a>

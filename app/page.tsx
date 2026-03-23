@@ -1,9 +1,9 @@
 import Hero from './components/Hero';
 import Features from './components/Features';
-import Menu from './components/Menu';
 import About from './components/About';
 import Contact from './components/Contact';
 import Faq from './components/Faq';
+import Logos from './components/Logos';
 import Image from 'next/image';
 
 export const metadata = {
@@ -19,8 +19,6 @@ export default function Home() {
       <Hero />
       {/* Features Section */}
       <Features />
-      {/* Menu Section */}
-      {/* <Menu /> */}
       <div className="w-full h-100 relative">
         <Image
           src="/catering-divider.webp"
@@ -32,6 +30,7 @@ export default function Home() {
       </div>
       {/* About Section */}
       <About />
+      <Logos />
       <div className="w-full h-100 relative">
         <Image
           src="/catering-divider.webp"
