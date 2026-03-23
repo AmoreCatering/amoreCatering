@@ -36,7 +36,7 @@ const logos = [
 export default function Faq() {
   return (
     <section className="py-12 border-t border-border bg-background">
-      <h1 className="text-2xl md:text-3xl font-bold mb-6 leading-tight text-primary text-center">
+      <h1 className="text-3xl! md:text-4xl! font-bold mb-4 text-primary text-center">
         Våra kunder
       </h1>
       <Carousel
