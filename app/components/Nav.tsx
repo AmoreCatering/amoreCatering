@@ -56,10 +56,10 @@ export default function Nav() {
       }`}
     >
       <nav className="flex flex-col md:flex-row items-center justify-between md:gap-8 px-6 md:px-12 lg:px-20 py-4 h-full mx-auto max-w-350">
-        <h2 className="text-lg md:text-2xl font-bold leading-none text-title uppercase border-b-2 border-accent">
+        <h2 className="text-lg md:text-2xl font-bold leading-none text-title uppercase border-b-2 border-primary">
           <Link href="/">Amore Catering</Link>
         </h2>
-        <div className="flex gap-4 md:gap-8 text-foreground text-sm md:text-base mt-2 md:mt-0 [&_a]:hover:text-accent [&_a]:transition-colors [&_a]:duration-300 [&_a]:uppercase">
+        <div className="flex gap-4 md:gap-8 text-foreground text-sm md:text-base mt-2 md:mt-0 [&_a]:hover:text-primary [&_a]:transition-colors [&_a]:duration-300 [&_a]:uppercase">
           <Link
             href="https://order.foodtec.se/gamore-catering/bestall-mat"
             rel="noopener noreferrer"
@@ -73,7 +73,7 @@ export default function Nav() {
           <div className="relative group" ref={dropdownRef}>
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
-              className="hover:text-accent transition-colors duration-300 uppercase cursor-pointer"
+              className="hover:text-primary transition-colors duration-300 uppercase cursor-pointer"
             >
               Områden
             </button>
