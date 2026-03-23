@@ -34,7 +34,7 @@ export default function Features() {
                 <h3 className="text-lg md:text-xl font-bold mb-3 text-primary group-hover:-translate-y-0.5 transition-transform duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                <p className="text-foreground/80 text-sm md:text-base leading-relaxed">
                   {feature.desc}
                 </p>
               </div>

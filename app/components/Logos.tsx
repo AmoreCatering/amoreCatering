@@ -35,7 +35,7 @@ const logos = [
 
 export default function Faq() {
   return (
-    <section className="py-12 border-t border-border bg-background">
+    <section className="py-8 md:py-12 border-t border-b border-border bg-background">
       <h1 className="text-3xl! md:text-4xl! font-bold mb-4 text-primary text-center">
         Våra kunder
       </h1>
@@ -53,7 +53,7 @@ export default function Faq() {
       >
         <CarouselContent className="-ml-1 w-full">
           {logos.map((logo, index) => (
-            <CarouselItem key={index} className="basis-1/5 pl-1">
+            <CarouselItem key={index} className="basis-1/2 md:basis-1/5 pl-1">
               <Card className="bg-white ring-0">
                 <div className="flex h-32 items-center justify-center p-1">
                   <Image

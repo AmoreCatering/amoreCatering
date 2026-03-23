@@ -31,15 +31,6 @@ export default function Home() {
       {/* About Section */}
       <About />
       <Logos />
-      <div className="w-full h-100 relative">
-        <Image
-          src="/catering-divider.webp"
-          alt="Premium Catering Background"
-          priority
-          fill
-          className="object-cover object-center"
-        />
-      </div>
       {/* Contact Section */}
       <Contact />
       {/* FAQ Section */}
