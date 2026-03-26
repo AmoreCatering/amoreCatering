@@ -91,8 +91,7 @@ export default async function AreaPage({
               </h2>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Vi levererar samma högkvalitativa hemlagad mat till {area.name}{' '}
-              som till resten av Stockholm. Alltid färskt, alltid med omsorg.
+              {area.underDescription}
             </p>
             <ul className="space-y-3">
               {area.highlights.map((h) => (

@@ -19,13 +19,13 @@ export default function Home() {
       <Hero />
       {/* Features Section */}
       <Features />
-      <div className="w-full h-100 relative">
+      <div className="w-full h-120 relative">
         <Image
           src="/catering-divider.JPEG"
           alt="Premium Catering Background"
           priority
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_20%]"
         />
       </div>
       {/* About Section */}
