@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: 'Erbjuder ni leverans?',
-    a: 'Ja, vi erbjuder leverans inom tullarna för 199kr och 299kr utanför tullarna. Ifall du beställer för mer än 6500 blir leveransen gratis.',
+    a: 'Ja, vi erbjuder leverans. Inom Stockholm för 260kr och 320kr utanför Stockholm. Ifall du beställer för mer än 6000kr blir leveransen gratis.',
   },
   {
     q: 'Kostar det att avboka min beställning?',
