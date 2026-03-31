@@ -2,6 +2,7 @@
 
 import { sendFormEmail } from '@/app/actions/email';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -79,6 +80,20 @@ export default function Contact() {
             <section>
               <h3 className="font-semibold mb-1">Plats</h3>
               <p>Stockholm, Sverige</p>
+            </section>
+            <section>
+              <h3 className="font-semibold mb-1">Info</h3>
+              <p>
+                Ifall du vill beställa direkt är du välkommen att använda vår{' '}
+                <Link
+                  href="https://order.foodtec.se/gamore-catering/bestall-mat"
+                  className="text-primary underline"
+                  target="blank_"
+                  rel="noopener noreferrer"
+                >
+                  Webbshop
+                </Link>
+              </p>
             </section>
           </div>
         </div>
