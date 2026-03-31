@@ -35,9 +35,10 @@ export default function Hero() {
   return (
     <div className="relative py-24 md:py-40 overflow-hidden">
       <Image
-        src="/catering-hero.JPEG"
+        src="/catering-hero.webp"
         fill
         alt="Premium Catering Background"
+        fetchPriority="high"
         className="absolute inset-0 w-full h-full object-cover object-center"
       />
       <div className="absolute inset-0 bg-foreground/50" />

@@ -21,9 +21,9 @@ export default function Home() {
       <Features />
       <div className="w-full h-120 relative">
         <Image
-          src="/catering-divider.JPEG"
+          src="/catering-divider.webp"
           alt="Premium Catering Background"
-          priority
+          fetchPriority="high"
           fill
           className="object-cover object-[center_20%]"
         />
