@@ -1,6 +1,7 @@
-//
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import CookieConsent from '@/components/CookieConsent';
+import AnalyticsWrapper from '@/components/AnalyticsWrapper';
 
 import type { Metadata } from 'next';
 import { Source_Sans_3 } from 'next/font/google';
@@ -103,8 +104,10 @@ export default function RootLayout({
         <main>
           <Nav />
           {children}
+          <AnalyticsWrapper />
           <Footer />
         </main>
+        <CookieConsent />
       </body>
     </html>
   );

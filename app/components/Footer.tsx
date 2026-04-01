@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="flex flex-col gap-8 pt-8 items-center bg-foreground/90 *:text-background [&_h2]:font-light [&_h2]:text-xl [&_h2]:uppercase [&_h2]:text-background/80 relative">
@@ -46,6 +48,14 @@ export default function Footer() {
             08 30 42 70
           </a>
         </address>
+      </section>
+      <section>
+        <Link
+          href="/integritetspolicy"
+          className="text-background/80 hover:text-background transition-colors ease-in-out text-sm uppercase"
+        >
+          Integritetspolicy
+        </Link>
       </section>
       <section>
         <p className="uppercase text-background/80 pb-8 text-sm text-center">
