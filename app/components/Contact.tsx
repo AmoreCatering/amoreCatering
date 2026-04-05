@@ -248,7 +248,7 @@ export default function Contact() {
                     Upphämtningsadress:
                   </p>
                   <p className="text-sm md:text-base text-foreground/80">
-                    Stockholm, Sverige
+                    Högalidsgatan 13B, 117 30 Stockholm
                   </p>
                 </div>
                 <div>
