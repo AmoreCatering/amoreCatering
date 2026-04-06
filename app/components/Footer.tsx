@@ -44,7 +44,7 @@ export default function Footer() {
           >
             Högalidsgatan 13B, 117 30 Stockholm
           </a>
-          <a className="phone" href="tel:+08304270">
+          <a className="phone" href="tel:08304270">
             08 30 42 70
           </a>
         </address>
