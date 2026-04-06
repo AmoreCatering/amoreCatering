@@ -56,7 +56,7 @@ export default function Hero() {
             <Link
               href="#kontakt"
               onClick={() => handleClick('#kontakt')}
-              className="flex items-center bg-primary text-background font-medium text-center px-8 py-3 rounded uppercase hover:-translate-y-1 transition-all duration-300"
+              className="flex items-center justify-center bg-primary text-background font-medium text-center px-8 py-3 rounded uppercase hover:-translate-y-1 transition-all duration-300"
             >
               boka catering
             </Link>
@@ -67,6 +67,12 @@ export default function Hero() {
               className="border-2 border-background/60 backdrop-blur-sm text-background font-medium text-center px-8 py-3 rounded uppercase hover:-translate-y-1 hover:border-background transition-all duration-300"
             >
               beställ online
+            </Link>
+            <Link
+              href="/catering/italiano"
+              className="border-2 border-background/60 backdrop-blur-sm text-background font-medium text-center px-8 py-3 rounded uppercase hover:-translate-y-1 hover:border-background transition-all duration-300"
+            >
+              Italiensk Catering
             </Link>
           </div>
         </section>
