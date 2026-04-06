@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
   compress: true,
   async redirects() {
     return [
+      { source: '/italiensk-catering', destination: '/#meny', permanent: true },
+      { source: '/category/uncategorized', destination: '/', permanent: true },
       { source: '/menu', destination: '/#meny', permanent: true },
       { source: '/about', destination: '/#om', permanent: true },
       { source: '/contact', destination: '/#kontakt', permanent: true },
