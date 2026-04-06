@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     'catering stockholm, catering företag stockholm, bröllopscatering, festcatering, företagsevenemang catering, hemlagad catering, buffé stockholm',
   authors: [{ name: 'Amore Catering' }],
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: '/favicon.png',
+  },
   openGraph: {
     title: 'Amore Catering Stockholm | Hemlagat & Gourmet',
     description:
