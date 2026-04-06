@@ -62,8 +62,8 @@ export default function Contact() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
         <div>
           <p className="mb-6 leading-relaxed text-foreground-secondary text-sm md:text-base">
-            Kontakta oss idag för att diskutera din event. Vi svarar snabbt och
-            hjälper dig planera en perfekt meny som passa era behov och budget.
+            Kontakta oss idag för att diskutera ditt event. Vi svarar snabbt och
+            hjälper dig planera en perfekt meny som passar era behov och budget.
           </p>
           <div className="space-y-4 text-sm md:text-base [&_h3]:text-primary [&_p]:text-foreground/80">
             <section>

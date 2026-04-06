@@ -36,13 +36,13 @@ export default function About() {
             </p>
             <p className="mb-4 leading-relaxed text-foreground/80 text-sm md:text-base">
               Vårt team består av erfarna kockar med passion för matlagning. Vi
-              arbetar noga med ingredienterna och tar tid för smaken. Ingen
-              förinlagd mat, allt görs från grunden.
+              arbetar noga med ingredienserna och tar tid för smaken. All mat
+              görs från grunden.
             </p>
             <p className="leading-relaxed text-foreground/80 text-sm md:text-base">
               Från små privata middagar till stora företagsevenemang, vi
-              anpassar oss till dina behov. Din gästers upplevelse är vår högsta
-              prioritet.
+              anpassar oss till dina behov. Dina gästers upplevelse är vår
+              högsta prioritet.
             </p>
           </div>
           <div className="rounded-lg p-4 md:p-8 border border-border bg-secondary">
