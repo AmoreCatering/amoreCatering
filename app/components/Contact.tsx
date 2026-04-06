@@ -70,7 +70,7 @@ export default function Contact() {
               <h3 className="font-semibold mb-1">Telefon</h3>
               <p>
                 <a
-                  href="tel:+08 30 42 70"
+                  href="tel:08 30 42 70"
                   className="hover:text-accent-hover transition"
                 >
                   08 30 42 70
