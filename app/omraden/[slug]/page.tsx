@@ -110,13 +110,8 @@ export default async function AreaPage({
               <p className="text-muted-foreground leading-relaxed">
                 Från{' '}
                 <span className="font-semibold text-foreground">
-                  345 SEK/person
+                  195 SEK/person
                 </span>{' '}
-                för buffé, från{' '}
-                <span className="font-semibold text-foreground">
-                  395 SEK/person
-                </span>{' '}
-                för klassisk meny.
               </p>
             </div>
 
@@ -133,11 +128,11 @@ export default async function AreaPage({
                   <span>08 30 42 70</span>
                 </a>
                 <a
-                  href="mailto:info@gamorecatering.se"
+                  href="mailto:hej@amorecatering.se"
                   className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"
                 >
                   <Mail className="w-4.5 h-4.5 text-primary" />
-                  <span>info@gamorecatering.se</span>
+                  <span>hej@amorecatering.se</span>
                 </a>
               </div>
             </section>

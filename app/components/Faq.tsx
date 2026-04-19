@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: 'Kostar det att avboka min beställning?',
-    a: 'För att avboka utan kostnad behöver du avboka minst 5 arbetsdagar innan beställningen ska levereras/hämtas upp, annars blir du debiterad hela beloppet.',
+    a: 'För att avboka utan kostnad behöver du avboka minst 72 timmar innan beställningen ska levereras/hämtas upp, annars blir du debiterad hela beloppet.',
   },
 ];
 

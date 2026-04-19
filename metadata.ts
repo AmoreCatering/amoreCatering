@@ -25,7 +25,7 @@ export const structuredData = {
   description: siteDescription,
   url: siteUrl,
   telephone: '+46701234567',
-  email: 'info@gamorecatering.se',
+  email: 'hej@amorecatering.se',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Stockholm',
