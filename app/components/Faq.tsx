@@ -1,7 +1,7 @@
 const faqs = [
   {
     q: 'Hur långt i förväg måste jag boka?',
-    a: 'Vi rekommenderar minst två veckor för att säkerställa bästa möjliga service och ingrediens-kvalitet. För större events kan vi ibland hantera kortare tidsplan.',
+    a: 'Du behöver boka catering minst 3 arbetsdagar innan ditt event.',
   },
   {
     q: 'Erbjuder ni vegetariska/veganska alternativ?',
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: 'Kostar det att avboka min beställning?',
-    a: 'För att avboka utan kostnad behöver du avboka minst 72 timmar innan beställningen ska levereras/hämtas upp, annars blir du debiterad hela beloppet.',
+    a: 'För att avboka utan kostnad behöver du avboka minst 3 arbetsdagar innan beställningen ska levereras/hämtas upp, annars blir du debiterad hela beloppet.',
   },
 ];
 
