@@ -107,9 +107,8 @@ export default async function CuisinePagePage({
             <div className="bg-secondary rounded-lg p-6 border border-border">
               <h3 className="text-xl font-bold text-title mb-3">Priser</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Från{' '}
                 <span className="font-semibold text-foreground">
-                  195 SEK/person
+                  {cuisine.type} från 195 SEK/person
                 </span>{' '}
               </p>
             </div>
