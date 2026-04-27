@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Amore Catering' }],
   metadataBase: new URL(siteUrl),
   icons: {
-    icon: '/favicon3.png',
+    icon: '/favicon4.png',
   },
   openGraph: {
     title: 'Amore Catering Stockholm | Hemlagat & Gourmet',
