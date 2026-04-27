@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
       { source: '/category/uncategorized', destination: '/', permanent: true },
       { source: '/about', destination: '/#om', permanent: true },
       { source: '/contact', destination: '/#kontakt', permanent: true },
+      {
+        source: '/privacy-policy',
+        destination: '/integritetspolicy',
+        permanent: true,
+      },
     ];
   },
 };
