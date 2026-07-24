@@ -1,5 +1,6 @@
 import { cuisines } from '@/app/data/cuisines';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import {
   ChevronRight,
   UtensilsCrossed,
@@ -18,13 +19,27 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}) {
+}): Promise<Metadata> {
   const { slug } = await params;
   const cuisine = cuisines.find((c) => c.slug === slug);
   if (!cuisine) return {};
+
+  const canonicalUrl = `https://www.amorecatering.se/catering/${cuisine.slug}`;
+
   return {
     title: `${cuisine.name} | Amore Catering`,
     description: cuisine.meta,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `${cuisine.name} | Amore Catering`,
+      description: cuisine.meta,
+      url: canonicalUrl,
+      siteName: 'Amore Catering',
+      locale: 'sv_SE',
+      type: 'website',
+    },
   };
 }
 
@@ -51,8 +66,45 @@ export default async function CuisinePagePage({
     );
   }
 
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: cuisine.name,
+      description: cuisine.meta || cuisine.description,
+      provider: {
+        '@type': 'FoodEstablishment',
+        name: 'Amore Catering',
+        url: 'https://www.amorecatering.se',
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Hem',
+          item: 'https://www.amorecatering.se',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: cuisine.name,
+          item: `https://www.amorecatering.se/catering/${cuisine.slug}`,
+        },
+      ],
+    },
+  ];
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero section */}
       <section className="bg-secondary border-b border-border">
         <div className="max-w-350 mx-auto px-6 md:px-12 lg:px-20 py-10 md:py-12">

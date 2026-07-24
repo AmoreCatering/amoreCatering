@@ -1,5 +1,6 @@
 import { areas } from '@/app/data/areas';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import {
   ChevronRight,
   MapPin,
@@ -19,13 +20,27 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}) {
+}): Promise<Metadata> {
   const { slug } = await params;
   const area = areas.find((a) => a.slug === slug);
   if (!area) return {};
+
+  const canonicalUrl = `https://www.amorecatering.se/omraden/${area.slug}`;
+
   return {
-    title: `${area.name} - Amore Catering`,
+    title: `Catering ${area.name} - Amore Catering`,
     description: area.meta,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `Catering ${area.name} - Amore Catering`,
+      description: area.meta,
+      url: canonicalUrl,
+      siteName: 'Amore Catering',
+      locale: 'sv_SE',
+      type: 'website',
+    },
   };
 }
 
@@ -52,9 +67,49 @@ export default async function AreaPage({
     );
   }
 
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: `Catering i ${area.name}`,
+      description: area.meta || area.description,
+      provider: {
+        '@type': 'FoodEstablishment',
+        name: 'Amore Catering',
+        url: 'https://www.amorecatering.se',
+      },
+      areaServed: {
+        '@type': 'AdministrativeArea',
+        name: area.name,
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Hem',
+          item: 'https://www.amorecatering.se',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: `Catering i ${area.name}`,
+          item: `https://www.amorecatering.se/omraden/${area.slug}`,
+        },
+      ],
+    },
+  ];
+
   return (
     <>
-      {/* Hero section */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <section className="bg-secondary border-b border-border">
         <div className="max-w-350 mx-auto px-6 md:px-12 lg:px-20 py-10 md:py-12">
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
@@ -79,10 +134,8 @@ export default async function AreaPage({
         </div>
       </section>
 
-      {/* Content */}
       <section className="max-w-350 mx-auto px-6 md:px-12 lg:px-20 py-16 md:py-20">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16">
-          {/* Left - What we offer */}
           <div>
             <div className="flex items-center gap-2.5 mb-5">
               <Utensils className="w-7 h-7 text-primary mt-1 shrink-0" />
@@ -103,12 +156,11 @@ export default async function AreaPage({
             </ul>
           </div>
 
-          {/* Right - Prices & Contact */}
           <div className="space-y-8">
             <div className="bg-secondary rounded-lg p-6 border border-border">
               <h3 className="text-xl font-bold text-title mb-3">Priser</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Testa vår goda italienska buffé från {''}
+                Testa vår goda italienska buffé från{' '}
                 <span className="font-semibold text-foreground">
                   195 SEK/person
                 </span>{' '}

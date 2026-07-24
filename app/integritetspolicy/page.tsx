@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://amorecatering.se'),
+  metadataBase: new URL('https://www.amorecatering.se'),
   title: 'Integritetspolicy - Amore Catering',
   description:
     'Läs Amore Caterings integritetspolicy. Vi värnar om dina personuppgifter och följer GDPR.',
@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Integritetspolicy - Amore Catering',
     description: 'Information om hur vi hanterar dina personuppgifter.',
-    url: 'https://amorecatering.se/integritetspolicy',
+    url: 'https://www.amorecatering.se/integritetspolicy',
     siteName: 'Amore Catering',
     locale: 'sv_SE',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://amorecatering.se/integritetspolicy',
+    canonical: 'https://www.amorecatering.se/integritetspolicy',
   },
 };
 

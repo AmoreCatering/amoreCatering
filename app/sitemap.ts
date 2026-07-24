@@ -2,12 +2,11 @@ import { MetadataRoute } from 'next';
 import { areas } from '@/app/data/areas';
 import { cuisines } from '@/app/data/cuisines';
 
-const baseUrl = 'https://amorecatering.se';
+const baseUrl = 'https://www.amorecatering.se';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date().toISOString().split('T')[0];
 
-  // Static pages
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -23,7 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dynamic cuisine pages
   const cuisinePages: MetadataRoute.Sitemap = cuisines.map((cuisine) => ({
     url: `${baseUrl}/catering/${cuisine.slug}`,
     lastModified: currentDate,
@@ -31,7 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  // Dynamic area pages
   const areaPages: MetadataRoute.Sitemap = areas.map((area) => ({
     url: `${baseUrl}/omraden/${area.slug}`,
     lastModified: currentDate,

@@ -9,7 +9,7 @@ import './globals.css';
 
 const sourceSans3 = Source_Sans_3({ subsets: ['latin'] });
 
-const siteUrl = 'https://amorecatering.se';
+const siteUrl = 'https://www.amorecatering.se';
 
 export const metadata: Metadata = {
   title: 'Amore Catering | Premium Catering Stockholm | Hemlagat & Gourmet',
