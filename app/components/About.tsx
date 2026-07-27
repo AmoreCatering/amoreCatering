@@ -46,9 +46,9 @@ export default function About() {
             </p>
           </div>
           <div className="rounded-lg p-4 md:p-8 border border-border bg-secondary">
-            <h3 className="text-lg md:text-xl font-bold mb-6 text-primary">
+            <h2 className="text-lg md:text-xl font-bold mb-6 text-primary">
               Vad vi erbjuder
-            </h3>
+            </h2>
             <div className="space-y-4 text-foreground/80 text-sm md:text-base">
               {offerings.map((o, i) => (
                 <div key={i}>

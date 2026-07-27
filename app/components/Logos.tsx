@@ -36,9 +36,9 @@ const logos = [
 export default function Faq() {
   return (
     <section className="py-8 md:py-12 border-t border-b border-border bg-background">
-      <h1 className="text-3xl! md:text-4xl! font-bold mb-4 text-primary text-center">
+      <h3 className="text-3xl! md:text-4xl! font-bold mb-4 text-primary text-center">
         Våra kunder
-      </h1>
+      </h3>
       <Carousel
         className="w-full"
         opts={{
