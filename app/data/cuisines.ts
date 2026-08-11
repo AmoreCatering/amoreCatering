@@ -74,4 +74,20 @@ export const cuisines: Cuisine[] = [
       'Smidiga leverans och upphämtningslösningar',
     ],
   },
+  {
+    id: 'wraps',
+    name: 'Wraps',
+    slug: 'wraps',
+    type: 'Wraps catering',
+    description:
+      'Söker du wraps catering i Stockholm? Amore Catering erbjuder smakrika wraps med färska ingredienser, perfekta till lunch, möten och evenemang där du vill servera något enkelt och gott.',
+    underDescription:
+      'Våra wraps är fyllda med välsmakande och färska komponenter och kan anpassas efter dina önskemål. Oavsett om du vill ha klassiska favoriter eller vegetariska alternativ blir varje wrap ett praktiskt och smakrikt val för alla gäster.',
+    meta: 'Wraps catering i Stockholm – smakrika wraps till lunch, möten och privata evenemang.',
+    highlights: [
+      'Färska och smakrika fyllningar',
+      'Perfekt till lunch och mingel',
+      'Vegetariska alternativ tillgängliga',
+    ],
+  },
 ];
