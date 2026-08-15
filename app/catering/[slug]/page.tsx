@@ -163,7 +163,9 @@ export default async function CuisinePagePage({
               <h3 className="text-xl font-bold text-title mb-3">Priser</h3>
               <p className="text-muted-foreground leading-relaxed">
                 <span className="font-semibold text-foreground">
-                  {cuisine.type} från {priceFrom}
+                  {cuisine.id == 'studentcatering'
+                    ? cuisine.priceInfo
+                    : `från ${priceFrom} SEK/${priceUnit}`}
                 </span>
               </p>
             </div>

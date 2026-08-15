@@ -9,6 +9,7 @@ export interface Cuisine {
   highlights: string[];
   // Minimum price as either a number in SEK or a display string
   priceFrom?: number | string;
+  priceInfo?: string;
   // Unit for the price, e.g. 'person' or 'portion'
   priceUnit?: string;
 }
@@ -29,7 +30,8 @@ export const cuisines: Cuisine[] = [
       'Passar både avslappnande tillställningar och exklusiva evenemang',
       'Vegetariska alternativ',
     ],
-    priceFrom: '195 SEK/person',
+    priceFrom: 195,
+    priceUnit: 'person',
   },
   {
     id: 'julbord',
@@ -46,7 +48,9 @@ export const cuisines: Cuisine[] = [
       'Vegetariska alternativ',
       'Komplett förberedelse och leverans',
     ],
-    priceFrom: '345 SEK/person',
+    priceFrom: 345,
+    // SEK/person
+    priceUnit: 'person',
   },
   {
     id: 'smorgastarta',
@@ -63,7 +67,8 @@ export const cuisines: Cuisine[] = [
       'Färska och smakrika smörgåstårtor',
       'Vegetariska alternativ',
     ],
-    priceFrom: '99 SEK/person',
+    priceFrom: 99,
+    priceUnit: 'person',
   },
   {
     id: 'studentcatering',
@@ -80,7 +85,7 @@ export const cuisines: Cuisine[] = [
       'Skräddarsydda alternativ för olika sällskap',
       'Smidiga leverans och upphämtningslösningar',
     ],
-    priceFrom:
+    priceInfo:
       'Kontakta oss för student catering i Stockholm och berätta om ditt sällskap, dina önskemål och hur du vill fira – så hjälper vi dig att hitta ett upplägg som passar din studentmottagning.',
   },
   {
@@ -98,6 +103,6 @@ export const cuisines: Cuisine[] = [
       'Perfekt till lunch och mingel',
       'Vegetariska alternativ tillgängliga',
     ],
-    priceFrom: '105 SEK/person',
+    priceFrom: 105,
   },
 ];
