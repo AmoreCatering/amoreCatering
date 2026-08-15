@@ -280,7 +280,7 @@ export default function Contact() {
                 name="message"
                 rows={4}
                 className="w-full rounded px-4 py-2 bg-background text-foreground border focus:outline-none focus:border-accent text-sm"
-                placeholder="Berätta om din event/särskilda önskemål..."
+                placeholder="Berätta om ditt event/särskilda önskemål..."
               />
             </div>
             {message && (
