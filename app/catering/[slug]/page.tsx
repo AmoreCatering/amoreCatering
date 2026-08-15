@@ -66,6 +66,9 @@ export default async function CuisinePagePage({
     );
   }
 
+  const priceFrom = cuisine.priceFrom ?? 195;
+  const priceUnit = cuisine.priceUnit ?? 'person';
+
   const jsonLd = [
     {
       '@context': 'https://schema.org',
@@ -160,8 +163,8 @@ export default async function CuisinePagePage({
               <h3 className="text-xl font-bold text-title mb-3">Priser</h3>
               <p className="text-muted-foreground leading-relaxed">
                 <span className="font-semibold text-foreground">
-                  {cuisine.type} från 195 SEK/person
-                </span>{' '}
+                  {cuisine.type} från {priceFrom}
+                </span>
               </p>
             </div>
 

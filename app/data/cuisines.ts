@@ -7,6 +7,10 @@ export interface Cuisine {
   underDescription: string;
   meta: string;
   highlights: string[];
+  // Minimum price as either a number in SEK or a display string
+  priceFrom?: number | string;
+  // Unit for the price, e.g. 'person' or 'portion'
+  priceUnit?: string;
 }
 
 export const cuisines: Cuisine[] = [
@@ -16,15 +20,16 @@ export const cuisines: Cuisine[] = [
     slug: 'italiano',
     type: 'Italiensk buffé',
     description:
-      'Letar du efter Italiensk Catering i Stockholm? Välkommen till Amore Catering! Vi specialiserar oss på autentisk italiensk mat med passion för traditioner och kvalitet. Vi är en liten cateringfirma med erfarenhet sedan 2016 av att leverera högklassig italiensk mat för både privatpersoner och företag i Stockholmsområdet. Beställ din nästa italienska catering hos oss!',
+      'Letar du efter italiensk mat i Stockholm eller italiensk catering för företag i Stockholm? Hör av dig till Amore catering så hjälper vi dig att planera maten för ditt nästa event.',
     underDescription:
-      'Italiensk catering är vår specialitet. Vi arbetar med autentiska italienska recept och använder endast färska, högkvalitativa ingredienser. Från klassisk pasta och risotto till grillade kötter och fisk, allt tillreds med passion och kärlek till italiensk matkultur. Vi erbjuder både vegetariska och veganska alternativ för att passa alla. Vårt sortiment inkluderar allt från eleganta förrätter till läckra pastarätter och dessertklassiker. Och vår specialitet, italiensk Gelato, tillverkas på simpla råvaror för att skapa en exklusiv och delikat produkt.',
+      'Vi erbjuder italiensk mat med genuina smaker, noggrant utvalda råvaror och med stor kärlek till det italienska köket. Oavsett om du planerar ett företagsevent, bröllop, mingel, en lunch, födelsedag eller större fest hjälper vi dig att skapa en smakfull cateringupplevelse.',
     meta: 'Italiensk catering i Stockholm – autentisk italiensk mat för företagsevenemang, bröllop och privata fester.',
     highlights: [
-      'Autentiska italienska recept',
-      'Färska ingredienser',
-      'Italiensk gelato',
+      'Italiensk färsk och smakrik mat',
+      'Passar både avslappnande tillställningar och exklusiva evenemang',
+      'Vegetariska alternativ',
     ],
+    priceFrom: '195 SEK/person',
   },
   {
     id: 'julbord',
@@ -32,15 +37,16 @@ export const cuisines: Cuisine[] = [
     slug: 'julbord',
     type: 'Julbord catering',
     description:
-      'Söker du julbord catering i Stockholm? Amore Catering levererar ett smakrikt, klassiskt julbord med omsorgsfullt tillagade rätter och svensk julstämning. Vi kan ordna ett komplett julbord för företag, kontor eller privata fester under hela vintersäsongen.',
+      'Låt oss på Amore catering skapa ett julbord som passar både företagsfesten, julfirandet, med familjen och årets stora sammankomst. Oavsett om du önskar ett traditionellt svenskt julbord, vegetariskt julbord eller andra alternativ hjälper vi dig hitta en lösning som passar ditt sällskap.',
     underDescription:
-      'Vårt julbord kombinerar traditionella smaker och modern cateringkomfort. Vi erbjuder allt från julskinka och köttbullar till Jansson, sillinläggningar och vegetariska alternativ. Allt är anpassat för leverans eller servering på plats och levereras med eleganta uppläggningar.',
+      'Vi erbjuder catering i Stockholm, med fokus på god mat och den klassiska julkänslan. Vårt julbord består av välkända favoriter från den svenska julmaten, någgrant tillagade för att göra julfirandet enkelt och smakfullt. Julens mat ska kunna njutas av alla. Därför erbjuder vi alternativ med vegetarisk julmat för dig som vill komplettera julbordet med gröna och smakrika alternativ.',
     meta: 'Julbord catering i Stockholm – komplett levererat julbord för företag, kontor och privata sammankomster.',
     highlights: [
-      'Klassiska julbordssmaker',
-      'Vegetariska julalternativ',
-      'Komplett leverans och servering',
+      'Perfekt till både företagsfest och firande med familj',
+      'Vegetariska alternativ',
+      'Komplett förberedelse och leverans',
     ],
+    priceFrom: '345 SEK/person',
   },
   {
     id: 'smorgastarta',
@@ -48,15 +54,16 @@ export const cuisines: Cuisine[] = [
     slug: 'smorgastarta',
     type: 'Smörgåstårta catering',
     description:
-      'Smörgåstårta till festen, vacker, smakrik och lätt att servera. Amore Catering skapar smörgåstårtor med fräscha fyllningar som lax, räkor, skaldjur och vegetariska alternativ. Perfekt till möten, studentfester och kalas.',
+      'Letar du efter en god och prisvärd smörgåstårta i Stockholm? Hos Amore Catering hittar du smakrika smörgåstårtor som passar lika bra till födelsedagar och studentmottagningar som till företagsevent och andra festliga tillfällen.',
     underDescription:
-      'Vår smörgåstårta är designad för både smak och utseende. Vi bygger den med fint bröd, krämiga fyllningar och färska toppningar, så att varje tårta blir ett smakfullt blickfång som fungerar utmärkt vid mingel eller sittande servering.',
+      'Välj den fyllning som passar bäst för ditt sällskap. En klassisk smörgåstårta med räkor är ett populärt val för dig som tycker om havets smaker, medan en smörgåstårta med skinka passar dig som föredrar en traditionell och smakrik variant. För dig som vill prova något lite annorlunda kan en italiensk smörgåstårta vara ett spännande alternativ. Med inspiration från det italienska köket får du en smörgåstårta med härliga smaker som skiljer sig från de klassiska varianterna. Vad kostar en smörgåstårta? Pris på smörgåstårta beror bland annat på storlek, antal portioner och vilken fyllning du väljer. Vi erbjuder alternativ för olika budgetar och hjälper dig gärna att hitta en lösning som passar ditt sällskap.',
     meta: 'Smörgåstårta catering i Stockholm – elegant smörgåstårta för fest, studentfirande och firmamöten.',
     highlights: [
-      'Färska och smakrika fyllningar',
-      'Presentabel leverans',
+      'Räkor, skinka eller italienska smaker? Vi har alternativ som passar olika önskemål och sällskap',
+      'Färska och smakrika smörgåstårtor',
       'Vegetariska alternativ',
     ],
+    priceFrom: '99 SEK/person',
   },
   {
     id: 'studentcatering',
@@ -64,15 +71,17 @@ export const cuisines: Cuisine[] = [
     slug: 'studentcatering',
     type: 'Studentcatering',
     description:
-      'Student catering i Stockholm för mottagningar, sittningar och fester. Amore Catering levererar flexibla menyer som passar studentlivet, med bufféer, plockmat, smörgåstårta och fika som gör firandet enkelt och smakrikt.',
+      'Studenten är en av livets stora dagar och självklart ska den firas med god mat och trevligt sällskap. Med catering för studenten från Amore Catering kan du lägga fokus på att fira studenten, medan vi fixar maten.',
     underDescription:
-      'Studentcatering från Amore Catering är prisvärd och enkel att ordna. Vi hjälper dig välja rätt kombination av rätter för både stora och små sällskap, med vegetariska alternativ och klassiska favoriter som är lätta att dela vid studentfirandet.',
-    meta: 'Student catering i Stockholm – prisvärd och festlig mat för studentmottagningar, sittningar och utspring.',
+      'Oavsett om du planerar en mindre studentmottagning hemma eller en större fest för familj och vänner erbjuder vi catering i Stockholm som gör studentfirandet både enklare och festligare.En studentmottagning samlar ofta många gäster med olika smaker och önskemål. Därför passar catering perfekt när du vill kunna bjuda på god och uppskattad mat utan att behöva stå i köket under hela firandet. Vi kan hjälpa dig att hitta en meny som passar just din studentmottagning, oavsett om du önskar en avslappnad buffé, festliga tilltugg eller en komplett måltid.',
+    meta: 'Student catering i Stockholm – prisvärd och festlig mat för studentmottagningar.',
     highlights: [
       'Prisvärd studentmeny',
-      'Skräddarsydda alternativ för större sällskap',
+      'Skräddarsydda alternativ för olika sällskap',
       'Smidiga leverans och upphämtningslösningar',
     ],
+    priceFrom:
+      'Kontakta oss för student catering i Stockholm och berätta om ditt sällskap, dina önskemål och hur du vill fira – så hjälper vi dig att hitta ett upplägg som passar din studentmottagning.',
   },
   {
     id: 'wraps',
@@ -89,5 +98,6 @@ export const cuisines: Cuisine[] = [
       'Perfekt till lunch och mingel',
       'Vegetariska alternativ tillgängliga',
     ],
+    priceFrom: '105 SEK/person',
   },
 ];
