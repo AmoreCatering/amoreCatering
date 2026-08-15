@@ -3,11 +3,15 @@
 import Link from 'next/link';
 import { useEffect, useState, useRef } from 'react';
 import { areas } from '@/app/data/areas';
+import { cuisines } from '@/app/data/cuisines';
 
 export default function Nav() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [openDropdown, setOpenDropdown] = useState<'areas' | 'catering' | null>(
+    null,
+  );
+  const areaDropdownRef = useRef<HTMLDivElement>(null);
+  const cateringDropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const scrollToHash = () => {
@@ -23,12 +27,15 @@ export default function Nav() {
     };
 
     const handleClickOutside = (e: MouseEvent) => {
-      if (!dropdownRef?.current?.contains(e.target as Node)) {
-        setDropdownOpen(false);
+      if (
+        !areaDropdownRef?.current?.contains(e.target as Node) &&
+        !cateringDropdownRef?.current?.contains(e.target as Node)
+      ) {
+        setOpenDropdown(null);
       }
     };
 
-    if (dropdownOpen) {
+    if (openDropdown) {
       document.addEventListener('click', handleClickOutside);
       return () => document.removeEventListener('click', handleClickOutside);
     }
@@ -37,7 +44,7 @@ export default function Nav() {
     scrollToHash();
     window.addEventListener('hashchange', scrollToHash);
     return () => window.removeEventListener('hashchange', scrollToHash);
-  }, [dropdownOpen]);
+  }, [openDropdown]);
 
   const handleLinkClick = (href: string) => {
     const id = href.slice(1);
@@ -67,25 +74,56 @@ export default function Nav() {
           >
             Beställ online
           </Link>
-          <Link href="/#om" onClick={() => handleLinkClick('#om')}>
-            Om Oss
-          </Link>
-          <div className="relative group" ref={dropdownRef}>
+          <div className="relative group" ref={cateringDropdownRef}>
             <button
-              onClick={() => setDropdownOpen(!dropdownOpen)}
+              onClick={() =>
+                setOpenDropdown(openDropdown === 'catering' ? null : 'catering')
+              }
+              className="hover:text-primary transition-colors duration-300 uppercase cursor-pointer"
+            >
+              Catering
+            </button>
+            <div
+              className={`absolute left-1/2 -translate-x-1/2 mt-0 w-44 bg-secondary border border-border rounded-lg shadow-lg transition-all duration-300 z-50 top-full pt-2 ${
+                openDropdown === 'catering'
+                  ? 'opacity-100 visible'
+                  : 'opacity-0 invisible group-hover:opacity-100 group-hover:visible'
+              }`}
+            >
+              {cuisines.map((cuisine) => (
+                <Link
+                  key={cuisine.id}
+                  href={`/catering/${cuisine.slug}`}
+                  className="flex px-4 py-2 text-sm text-foreground"
+                  onClick={() => setOpenDropdown(null)}
+                >
+                  {cuisine.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="relative group" ref={areaDropdownRef}>
+            <button
+              onClick={() =>
+                setOpenDropdown(openDropdown === 'areas' ? null : 'areas')
+              }
               className="hover:text-primary transition-colors duration-300 uppercase cursor-pointer"
             >
               Områden
             </button>
             <div
-              className={`absolute left-1/2 -translate-x-1/2 mt-0 w-32 bg-secondary border border-border rounded-lg shadow-lg transition-all duration-300 z-50 top-full pt-2 ${dropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible group-hover:opacity-100 group-hover:visible'}`}
+              className={`absolute left-1/2 -translate-x-1/2 mt-0 w-32 bg-secondary border border-border rounded-lg shadow-lg transition-all duration-300 z-50 top-full pt-2 ${
+                openDropdown === 'areas'
+                  ? 'opacity-100 visible'
+                  : 'opacity-0 invisible group-hover:opacity-100 group-hover:visible'
+              }`}
             >
               {areas.map((area) => (
                 <Link
                   key={area.id}
                   href={`/omraden/${area.slug}`}
                   className="flex px-4 py-2 text-sm text-foreground"
-                  onClick={() => setDropdownOpen(false)}
+                  onClick={() => setOpenDropdown(null)}
                 >
                   {area.name}
                 </Link>
