@@ -1,57 +1,46 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-
-type ConsentStatus = 'pending' | 'accepted' | 'rejected';
+import { saveConsentStatus, useConsentStatus } from '@/hooks/use-consent';
 
 export default function CookieConsent() {
-  const [consent, setConsent] = useState<ConsentStatus>('pending');
-  const [showBanner, setShowBanner] = useState(false);
-
-  useEffect(() => {
-    // Check if user has already made a choice
-    const savedConsent = localStorage.getItem(
-      'cookie-consent',
-    ) as ConsentStatus | null;
-
-    if (savedConsent) {
-      setConsent(savedConsent);
-      setShowBanner(false);
-    } else {
-      // Check for Do Not Track
-      const dnt = navigator.doNotTrack === '1';
-      if (dnt) {
-        // Respect DNT - treat as rejected
-        setConsent('rejected');
-        localStorage.setItem('cookie-consent', 'rejected');
-        setShowBanner(false);
-      } else {
-        // Show banner
-        setShowBanner(true);
-      }
-    }
-  }, []);
+  const { consent, isLoaded } = useConsentStatus();
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const showBanner = consent === 'pending' || isSettingsOpen;
 
   const handleAccept = () => {
-    localStorage.setItem('cookie-consent', 'accepted');
-    setConsent('accepted');
-    setShowBanner(false);
-    window.location.reload(); // Reload to load Analytics
+    saveConsentStatus('accepted');
+    setIsSettingsOpen(false);
   };
 
   const handleReject = () => {
-    localStorage.setItem('cookie-consent', 'rejected');
-    setConsent('rejected');
-    setShowBanner(false);
+    saveConsentStatus('rejected');
+    setIsSettingsOpen(false);
   };
 
-  if (!showBanner) {
+  if (!isLoaded) {
     return null;
   }
 
+  if (!showBanner) {
+    return (
+      <button
+        type="button"
+        onClick={() => setIsSettingsOpen(true)}
+        className="fixed bottom-4 right-4 z-40 rounded bg-amber-950 px-3 py-2 text-xs font-medium text-white shadow-lg transition-colors hover:bg-amber-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-700"
+      >
+        Cookieinställningar
+      </button>
+    );
+  }
+
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-amber-900 text-white p-4 md:p-6 shadow-2xl">
+    <div
+      role="dialog"
+      aria-label="Cookieinställningar"
+      className="fixed bottom-0 left-0 right-0 z-50 bg-amber-900 p-4 text-white shadow-2xl md:p-6"
+    >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div className="flex-1">
           <h3 className="font-semibold mb-2 text-lg">Cookies & Dataskydd</h3>

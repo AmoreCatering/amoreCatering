@@ -53,16 +53,18 @@ function Page() {
           </p>
           <p className="pt-2">
             <strong>Analytics-cookies:</strong> För att förbättra vår webbplats
-            använder vi Vercel Analytics. Dessa laddas ENDAST om du accepterar
-            alla cookies via bannern eller om du har gjort ett tidigare val om
-            att acceptera. Om du väljer &quot;Endast nödvändiga&quot; kommer
-            dessa INTE att laddas.
+            använder vi Vercel Analytics och, när Google Analytics är
+            konfigurerat, Google Analytics 4. Dessa laddas ENDAST om du
+            accepterar alla cookies. Google Analytics använder bland annat
+            cookies med namn som börjar på &quot;_ga&quot;. Om du väljer
+            &quot;Endast nödvändiga&quot; laddas inte analysverktygen. Om du
+            återkallar ditt samtycke stoppas framtida analys och Google
+            Analytics-cookies tas bort från din webbläsare.
           </p>
           <p className="pt-2">
-            <strong>Ändra ditt val:</strong> Du kan när som helst ändra ditt
-            cookie-val genom att kontakta oss via 08 30 42 70 eller genom att
-            aktivera &quot;Do Not Track&quot; i din webbläsares
-            sekretessinställningar, så respekteras ditt val automatiskt.
+            <strong>Ändra ditt val:</strong> Du kan när som helst öppna
+            &quot;Cookieinställningar&quot; längst ned på sidan för att ändra
+            eller återkalla ditt samtycke.
           </p>
         </section>
 
