@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import CookieConsent from '@/components/CookieConsent';
@@ -107,7 +108,9 @@ export default function RootLayout({
         <main>
           <Nav />
           {children}
-          <AnalyticsWrapper />
+          <Suspense fallback={null}>
+            <AnalyticsWrapper />
+          </Suspense>
           <Footer />
         </main>
         <CookieConsent />
