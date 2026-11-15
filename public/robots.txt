@@ -6,14 +6,4 @@ Disallow: /.next/
 Disallow: /private/
 
 # Sitemap
-Sitemap: https://gamorecatering.se/sitemap.xml
-
-# Crawl delay
-Crawl-delay: 1
-
-# Good bots
-User-agent: Googlebot
-Crawl-delay: 0
-
-User-agent: Bingbot
-Crawl-delay: 0
+Sitemap: https://www.amorecatering.se/sitemap.xml
