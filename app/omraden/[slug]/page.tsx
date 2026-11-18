@@ -128,6 +128,9 @@ export default async function AreaPage({
               Catering i {area.name}
             </h1>
           </div>
+          <span className="text-accent-muted italic font-medium">
+            {area.underHeader}
+          </span>
           <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
             {area.description}
           </p>

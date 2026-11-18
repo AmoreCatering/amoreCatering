@@ -1,145 +1,177 @@
 export interface Area {
   id: string;
   name: string;
+  underHeader: string;
   slug: string;
   description: string;
   underDescription: string;
   meta: string;
   highlights: string[];
 }
+
 export const areas: Area[] = [
   {
     id: 'vasastan',
     name: 'Vasastan',
+    underHeader: 'God mat och italiensk catering i Vasastan',
     slug: 'vasastan',
     description:
-      'Letar du efter Catering Vasastan? Välkommen till Amore Catering! Vi är en liten cateringfirma med 30 års erfarenhet av att leverera högklassig och smarrig catering med allt från lättare maträtter, smörgåsar och wraps och vi jobbar med både privatpersoner och företag i Stockholmsområdet. Beställ din nästa Catering Huddinge hos oss!',
+      'Letar du efter catering i Vasastan som gör din fest, middag eller tillställning extra minnesvärd? Amore Catering erbjuder ett smakrikt utbud av italiensk mat, läckra bufféer och goda rätter för både små och stora sällskap.',
     underDescription:
-      'Smörgåsar och wraps är enligt oss den perfekta cateringmaten. De går att anpassa för alla typer av evenemang, aptiter, smakriktningar och tider på dygnet och de går att variera i det oändliga. I vårt sortiment erbjuder vi bland annat både vegetariska och veganska wraps och smörgåsar för att det ska kunna passa alla. Hos oss kan du välja mellan allt från lunchmackor och wraps till lyxbakelser. Och så smörgåstårta, förstås! Dessutom får ni inte missa vår specialitet, italienska Gelato som tillverkas på simpla råvaror för att skapa en exklusiv och delikat produkt.',
-    meta: 'Hemlagad catering levererat till Vasastan – färsk mat för företag och privata event i centrala Stockholm.',
+      'Hos oss hittar du bland annat italienska bufféer, smörgåstårtor, wraps, sallader, tårtor och härliga desserter. Vi erbjuder även lunchcatering för företag och goda alternativ för dig som föredrar vegetarisk eller vegansk mat. Oavsett om du planerar en privat fest, ett företagsevent eller en trevlig lunch hjälper vi dig att hitta rätt mat för tillfället. Beställ enkelt direkt i vår webbshop och välj mellan avhämtning och leverans. Har du särskilda önskemål eller frågor? Kontakta oss gärna!',
+    meta: 'Söker du catering i Vasastan? Upptäck italiensk mat, bufféer, smörgåstårtor och lunchcatering från Amore Catering. Beställ enkelt online!',
     highlights: [
-      'Företagsluncher & konferenser',
-      'Privata middagar',
-      'Leverans inom 24h',
+      'Italiensk catering och bufféer',
+      'Smörgåstårtor, wraps och sallader',
+      'Lunchcatering samt veganska och vegetariska val',
     ],
   },
   {
     id: 'sodermalm',
     name: 'Södermalm',
+    underHeader: 'Sätt extra smak på festen med Amore Catering på Södermalm',
     slug: 'sodermalm',
     description:
-      'Letar du efter Catering Södermalm? Välkommen till Amore Catering! Vi är en liten cateringfirma med 30 års erfarenhet av att leverera högklassig och smarrig catering med allt från lättare maträtter, smörgåsar och wraps och vi jobbar med både privatpersoner och företag i Stockholmsområdet. Beställ din nästa Catering Huddinge hos oss!',
+      'Planerar du en fest, födelsedag, middag eller ett företagsevent på Södermalm? Låt Amore Catering hjälpa dig med maten!',
     underDescription:
-      'Smörgåsar och wraps är enligt oss den perfekta cateringmaten. De går att anpassa för alla typer av evenemang, aptiter, smakriktningar och tider på dygnet och de går att variera i det oändliga. I vårt sortiment erbjuder vi bland annat både vegetariska och veganska wraps och smörgåsar för att det ska kunna passa alla. Hos oss kan du välja mellan allt från lunchmackor och wraps till lyxbakelser. Och så smörgåstårta, förstås! Dessutom får ni inte missa vår specialitet, italienska Gelato som tillverkas på simpla råvaror för att skapa en exklusiv och delikat produkt.',
-    meta: 'Hemlagad catering levererat till ditt hem i Södermalm – perfekt för fester, middagar och företagsevent.',
+      'Vi erbjuder catering med inspiration från det italienska köket, smakrika bufféer och ett varierat utbud som passar många olika tillfällen. Välj bland våra italienska maträtter, fräscha sallader, wraps, smörgåstårtor och goda desserter. Är du sugen på något sött erbjuder vi även vanliga tårtor och läckra glasstårtor. Vi tänker också på att alla gäster ska kunna njuta av maten. Därför erbjuder vi anpassade alternativ för både vegetarianer och veganer. Med Amore Catering blir det enklare att bjuda på god mat utan att behöva stå i köket hela dagen. Besök vår webbshop, välj dina favoriter och beställ online. Vi erbjuder både avhämtning och leverans.',
+    meta: 'Catering på Södermalm från Amore Catering. Beställ italiensk buffé, smörgåstårtor, sallader, wraps och desserter enkelt online.',
     highlights: [
-      'Buffé & sittande middagar',
-      'Fester & firanden',
-      'Flexibla menyer',
+      'Italiensk mat och bufféer',
+      'Smörgåstårtor, wraps och sallader',
+      'Tårtor, desserter och anpassade veganska val',
     ],
   },
   {
     id: 'huddinge',
     name: 'Huddinge',
+    underHeader: 'Letar du efter god catering i Huddinge? Vi hjälper dig!',
     slug: 'huddinge',
     description:
-      'Letar du efter Catering Huddinge? Välkommen till Amore Catering! Vi är en liten cateringfirma med 30 års erfarenhet av att leverera högklassig och smarrig catering med allt från lättare maträtter, smörgåsar och wraps och vi jobbar med både privatpersoner och företag i Stockholmsområdet. Beställ din nästa Catering Huddinge hos oss!',
+      'Vi hjälper dig! Oavsett om du planerar ett födelsedagskalas, en familjefest, ett bröllop eller en tillställning på jobbet är god mat en viktig del av upplevelsen.',
     underDescription:
-      'Smörgåsar och wraps är enligt oss den perfekta cateringmaten. De går att anpassa för alla typer av evenemang, aptiter, smakriktningar och tider på dygnet och de går att variera i det oändliga. I vårt sortiment erbjuder vi bland annat både vegetariska och veganska wraps och smörgåsar för att det ska kunna passa alla. Hos oss kan du välja mellan allt från lunchmackor och wraps till lyxbakelser. Och så smörgåstårta, förstås! Dessutom får ni inte missa vår specialitet, italienska Gelato som tillverkas på simpla råvaror för att skapa en exklusiv och delikat produkt.',
-    meta: 'Färsk mat direkt till din event i Huddinge – professionell catering med hemlagad kvalitet.',
+      'Amore Catering erbjuder ett brett utbud av catering för dig i Huddinge. Vi har italiensk mat och bufféer för dig som älskar medelhavets smaker, men också smörgåstårtor, wraps, sallader och läckra desserter. Vill du bjuda på något extra festligt? Våra vanliga tårtor och glasstårtor passar perfekt när det finns något att fira. Vi erbjuder dessutom lunchcatering för företag och kan anpassa maträtter efter önskemål, även för vegetarianer och veganer. Gör det enkelt för dig själv och låt oss hjälpa till med maten. Beställ direkt i vår webbshop och välj avhämtning eller leverans.',
+    meta: 'Amore Catering erbjuder catering i Huddinge med italiensk mat, bufféer, smörgåstårtor, tårtor och företagsluncher. Beställ online!',
     highlights: [
-      'Bröllop & familjeträffar',
-      'Företagsevent',
-      'Stora & små sällskap',
+      'Italiensk mat och bufféer',
+      'Smörgåstårtor, wraps och sallader',
+      'Företagslunch samt veganska och vegetariska alternativ',
     ],
   },
   {
     id: 'lidingo',
     name: 'Lidingö',
+    underHeader:
+      'Gör festen på Lidingö extra god med catering från Amore Catering',
     slug: 'lidingo',
     description:
-      'Letar du efter Catering Lidingö? Välkommen till Amore Catering! Vi är en liten cateringfirma med 30 års erfarenhet av att leverera högklassig och smarrig catering med allt från lättare maträtter, smörgåsar och wraps och vi jobbar med både privatpersoner och företag i Stockholmsområdet. Beställ din nästa catering hos oss!',
+      'En lyckad fest börjar ofta med riktigt god mat! Ska du ordna en födelsedag, familjemiddag, fest eller ett företagsevenemang på Lidingö? Då kan Amore Catering hjälpa dig att skapa en smakrik upplevelse för dina gäster.',
     underDescription:
-      'Smörgåsar och wraps är enligt oss den perfekta cateringmaten. De går att anpassa för alla typer av evenemang, aptiter, smakriktningar och tider på dygnet och de går att variera i det oändliga. I vårt sortiment erbjuder vi bland annat både vegetariska och veganska wraps och smörgåsar för att det ska kunna passa alla. Hos oss kan du välja mellan allt från lunchmackor och wraps till lyxbakelser. Och så smörgåstårta, förstås! Dessutom får ni inte missa vår specialitet, italienska Gelato som tillverkas på simpla råvaror för att skapa en exklusiv och delikat produkt.',
-    meta: 'Catering levererat till Lidingö – färsk mat för privatpersoner och företag på Stockholms norra sida.',
-    highlights: ['Företagsluncher & möten', 'Familjefester', 'Snabb leverans'],
+      'Vi erbjuder italiensk catering med goda maträtter och härliga bufféer. I vårt sortiment hittar du även smörgåstårtor, wraps, sallader och olika desserter. För speciella tillfällen kan du också beställa vanliga tårtor och glasstårtor. Vi vet att alla gäster har olika önskemål. Därför erbjuder vi även maträtter som kan anpassas för vegetarianer och veganer. Du behöver inte lägga hela dagen på matlagning och förberedelser. Låt oss hjälpa dig istället! Beställ din catering enkelt via Amore Caterings webbshop. Du kan välja avhämtning eller leverans.',
+    meta: 'Catering på Lidingö med italiensk mat, bufféer, smörgåstårtor och desserter. Beställ festmat från Amore Catering online!',
+    highlights: [
+      'Italiensk catering och bufféer',
+      'Smörgåstårtor, wraps och sallader',
+      'Tårtor och anpassade vegetariska eller veganska rätter',
+    ],
   },
   {
     id: 'nacka',
     name: 'Nacka',
+    underHeader: 'Italiensk catering och god festmat i Nacka',
     slug: 'nacka',
     description:
-      'Letar du efter Catering Nacka? Välkommen till Amore Catering! Vi är en liten cateringfirma med 30 års erfarenhet av att leverera högklassig och smarrig catering med allt från lättare maträtter, smörgåsar och wraps och vi jobbar med både privatpersoner och företag i Stockholmsområdet. Beställ din nästa catering hos oss!',
+      'Italiensk catering och god festmat i Nacka. Letar du efter catering i Nacka som erbjuder något gott för alla? Hos Amore Catering hittar du ett varierat sortiment av mat som passar både vardag och fest.',
     underDescription:
-      'Smörgåsar och wraps är enligt oss den perfekta cateringmaten. De går att anpassa för alla typer av evenemang, aptiter, smakriktningar och tider på dygnet och de går att variera i det oändliga. I vårt sortiment erbjuder vi bland annat både vegetariska och veganska wraps och smörgåsar för att det ska kunna passa alla. Hos oss kan du välja mellan allt från lunchmackor och wraps till lyxbakelser. Och så smörgåstårta, förstås! Dessutom får ni inte missa vår specialitet, italienska Gelato som tillverkas på simpla råvaror för att skapa en exklusiv och delikat produkt.',
-    meta: 'Hemlagad catering till Nacka – perfekt för lunch, fester och företagsevent.',
+      'Våra italienska bufféer passar utmärkt när du vill bjuda familj, vänner eller kollegor på en härlig måltid. Du kan också välja bland våra smörgåstårtor, wraps, sallader och desserter. För dig som planerar ett kalas eller firande erbjuder vi även vanliga tårtor och glasstårtor som gör tillfället ännu festligare. Vi erbjuder dessutom företagsluncher och specialanpassade maträtter för både vegetarianer och veganer. Oavsett om du behöver mat till en mindre sammankomst eller en större tillställning vill vi göra beställningen så smidig som möjligt. Besök vår webbshop och upptäck vårt utbud. Beställ online med möjlighet till avhämtning eller leverans.',
+    meta: 'Beställ catering i Nacka från Amore Catering. Italienska bufféer, smörgåstårtor, sallader, wraps och festmat för alla tillfällen.',
     highlights: [
-      'Buffé & sittande middagar',
-      'Privatfester',
-      'Flexibla portionstorlekar',
+      'Italienska bufféer för vardag och fest',
+      'Smörgåstårtor, wraps och sallader',
+      'Företagsluncher och specialanpassade rätter',
     ],
   },
   {
     id: 'ostermalm',
     name: 'Östermalm',
+    underHeader:
+      'God catering på Östermalm för fest, företag och speciella tillfällen',
     slug: 'ostermalm',
     description:
-      'Letar du efter Catering Östermalm? Välkommen till Amore Catering! Vi är en liten cateringfirma med 30 års erfarenhet av att leverera högklassig och smarrig catering med allt från lättare maträtter, smörgåsar och wraps och vi jobbar med både privatpersoner och företag i Stockholmsområdet. Beställ din nästa catering hos oss!',
+      'När maten spelar en viktig roll för tillställningen vill du kunna lita på ett varierat och smakrikt utbud. Amore Catering erbjuder catering på Östermalm för både privatpersoner och företag.',
     underDescription:
-      'Smörgåsar och wraps är enligt oss den perfekta cateringmaten. De går att anpassa för alla typer av evenemang, aptiter, smakriktningar och tider på dygnet och de går att variera i det oändliga. I vårt sortiment erbjuder vi bland annat både vegetariska och veganska wraps och smörgåsar för att det ska kunna passa alla. Hos oss kan du välja mellan allt från lunchmackor och wraps till lyxbakelser. Och så smörgåstårta, förstås! Dessutom får ni inte missa vår specialitet, italienska Gelato som tillverkas på simpla råvaror för att skapa en exklusiv och delikat produkt.',
-    meta: 'Gourmet catering till Östermalm – högklassig mat för exklusiva event och affärsluncher.',
-    highlights: ['Affärsluncher', 'Exklusiva event', 'Premium menyer'],
+      'Upptäck våra italienskt inspirerade maträtter och bufféer som passar perfekt för middagar, festligheter och företagsevenemang. Vi erbjuder även smörgåstårtor, wraps, sallader och desserter för dig som vill bjuda på något gott och uppskattat. Planerar du en födelsedag eller ett annat speciellt firande? Välj bland våra vanliga tårtor och glasstårtor. För företag erbjuder vi lunchcatering, och för gäster med särskilda kostönskemål finns möjlighet att beställa anpassade vegetariska och veganska maträtter. Beställ enkelt via vår webbshop och välj mellan avhämtning och leverans.',
+    meta: 'Catering på Östermalm från Amore Catering. Italiensk buffé, smörgåstårtor, lunchcatering, sallader och desserter. Beställ online!',
+    highlights: [
+      'Italienskt inspirerade maträtter och bufféer',
+      'Smörgåstårtor, wraps och sallader',
+      'Lunchcatering samt vegetariska och veganska alternativ',
+    ],
   },
   {
     id: 'skarholmen',
     name: 'Skärholmen',
+    underHeader: 'Behöver du catering i Skärholmen? Upptäck Amore Catering!',
     slug: 'skarholmen',
     description:
-      'Letar du efter Catering Skärholmen? Välkommen till Amore Catering! Vi är en liten cateringfirma med 30 års erfarenhet av att leverera högklassig och smarrig catering med allt från lättare maträtter, smörgåsar och wraps och vi jobbar med både privatpersoner och företag i Stockholmsområdet. Beställ din nästa catering hos oss!',
+      'Ska du ordna en fest, ett kalas, en familjesammankomst eller kanske bjuda kollegorna på en god lunch? Med Amore Catering blir det enklare att bjuda på mat som passar tillfället.',
     underDescription:
-      'Smörgåsar och wraps är enligt oss den perfekta cateringmaten. De går att anpassa för alla typer av evenemang, aptiter, smakriktningar och tider på dygnet och de går att variera i det oändliga. I vårt sortiment erbjuder vi bland annat både vegetariska och veganska wraps och smörgåsar för att det ska kunna passa alla. Hos oss kan du välja mellan allt från lunchmackor och wraps till lyxbakelser. Och så smörgåstårta, förstås! Dessutom får ni inte missa vår specialitet, italienska Gelato som tillverkas på simpla råvaror för att skapa en exklusiv och delikat produkt.',
-    meta: 'Catering till Skärholmen – läckra smörgåsar och tårtor för alla typer av sammankomster.',
+      'Vi erbjuder italiensk mat och bufféer med härliga smaker samt ett brett urval av andra cateringalternativ. Hos oss kan du beställa smörgåstårtor, wraps, sallader och goda desserter. Vi har även vanliga tårtor och glasstårtor för dig som vill avsluta måltiden med något riktigt gott. Vi erbjuder också lunchcatering för företag och kan anpassa maträtter efter önskemål för både vegetarianer och veganer. Oavsett vad du planerar hjälper vi dig att hitta god mat till dina gäster. Besök Amore Caterings webbshop, välj det som passar dig och beställ enkelt online. Du kan hämta maten själv eller välja leverans.',
+    meta: 'Catering i Skärholmen med italiensk mat, bufféer, smörgåstårtor, wraps och tårtor. Upptäck Amore Catering och beställ online!',
     highlights: [
-      'Smörgåstårtor',
-      'Barn- & familjekalas',
-      'Stora beställningar',
+      'Italiensk mat och bufféer',
+      'Smörgåstårtor, wraps och sallader',
+      'Lunchcatering, tårtor och anpassade veganska rätter',
     ],
   },
   {
     id: 'bromma',
     name: 'Bromma',
+    underHeader:
+      'Amore Catering, smakrik catering i Bromma för alla tillfällen',
     slug: 'bromma',
     description:
-      'Letar du efter Catering Bromma? Välkommen till Amore Catering! Vi är en liten cateringfirma med 30 års erfarenhet av att leverera högklassig och smarrig catering med allt från lättare maträtter, smörgåsar och wraps och vi jobbar med både privatpersoner och företag i Stockholmsområdet. Beställ din nästa catering hos oss!',
+      'God mat gör varje tillställning lite trevligare. Om du söker catering i Bromma för en fest, familjemiddag, födelsedag eller ett företagsevent är Amore Catering ett alternativ att upptäcka.',
     underDescription:
-      'Smörgåsar och wraps är enligt oss den perfekta cateringmaten. De går att anpassa för alla typer av evenemang, aptiter, smakriktningar och tider på dygnet och de går att variera i det oändliga. I vårt sortiment erbjuder vi bland annat både vegetariska och veganska wraps och smörgåsar för att det ska kunna passa alla. Hos oss kan du välja mellan allt från lunchmackor och wraps till lyxbakelser. Och så smörgåstårta, förstás! Dessutom får ni inte missa vår specialitet, italienska Gelato som tillverkas på simpla råvaror för att skapa en exklusiv och delikat produkt.',
-    meta: 'Färsk catering levererat till Bromma – hemlagad mat för företag och privatpersoner.',
-    highlights: ['Företagsevent', 'Privata fester', 'Italiensk gelato'],
+      'Vi erbjuder italiensk mat och bufféer för dig som vill bjuda på en god och varierad måltid. I vårt utbud finns även smörgåstårtor, wraps och fräscha sallader som passar både luncher och festliga sammankomster. Vill du bjuda på något sött efter maten? Vi erbjuder både vanliga tårtor, glasstårtor och andra goda desserter. För företag finns lunchcatering, och vi erbjuder även anpassade maträtter för veganer och vegetarianer. Vi vill göra det enkelt att beställa god mat. Därför kan du handla direkt i vår webbshop och välja mellan avhämtning och leverans.',
+    meta: 'Söker du catering i Bromma? Amore Catering erbjuder italienska bufféer, smörgåstårtor, luncher, sallader och desserter. Beställ online!',
+    highlights: [
+      'Italienska bufféer och maträtter',
+      'Smörgåstårtor, wraps och sallader',
+      'Lunchcatering samt veganska och vegetariska rätter',
+    ],
   },
   {
     id: 'solna',
     name: 'Solna',
+    underHeader: 'Catering i Solna för företag, fester och goda stunder',
     slug: 'solna',
     description:
-      'Letar du efter Catering Solna? Välkommen till Amore Catering! Vi är en liten cateringfirma med 30 års erfarenhet av att leverera högklassig och smarrig catering med allt från lättare maträtter, smörgåsar och wraps och vi jobbar med både privatpersoner och företag i Stockholmsområdet. Beställ din nästa catering hos oss!',
+      'Behöver du ordna mat till en företagslunch, konferens, födelsedag eller privat fest i Solna? Amore Catering erbjuder ett varierat utbud av catering som gör det enklare att bjuda på god mat.',
     underDescription:
-      'Smörgåsar och wraps är enligt oss den perfekta cateringmaten. De går att anpassa för alla typer av evenemang, aptiter, smakriktningar och tider på dygnet och de går att variera i det oändliga. I vårt sortiment erbjuder vi bland annat både vegetariska och veganska wraps och smörgåsar för att det ska kunna passa alla. Hos oss kan du välja mellan allt från lunchmackor och wraps till lyxbakelser. Och så smörgåstårta, förstás! Dessutom får ni inte missa vår specialitet, italienska Gelato som tillverkas på simpla råvaror för att skapa en exklusiv och delikat produkt.',
-    meta: 'Italiensk catering levererat till Solna – gelato och hemlagad mat av högsta kvalitet.',
-    highlights: ['Italiensk gelato', 'Möten & konferenser', 'Företagsluncher'],
+      'För dig som uppskattar italienska smaker erbjuder vi italiensk mat och bufféer som passar många olika tillfällen. Du kan också välja bland våra smörgåstårtor, wraps och sallader när du vill bjuda på något gott till lunch eller möte. Vi har även vanliga tårtor, glasstårtor och desserter för festligare tillfällen. För företag erbjuder vi lunchcatering, och vi kan även hjälpa till med specialanpassade maträtter för vegetarianer och veganer. Med vår webbshop kan du enkelt se utbudet och lägga din beställning när det passar dig. Välj avhämtning eller leverans.',
+    meta: 'Företagscatering och festcatering i Solna från Amore Catering. Beställ italiensk buffé, lunch, smörgåstårta och mycket mer online!',
+    highlights: [
+      'Italiensk mat och bufféer',
+      'Smörgåstårtor, wraps och sallader',
+      'Lunchcatering, tårtor och anpassade veganska rätter',
+    ],
   },
   {
     id: 'stockholm',
     name: 'Stockholm',
+    underHeader:
+      'Amore Catering, din catering för goda matupplevelser i Stockholm',
     slug: 'stockholm',
     description:
-      'Letar du efter Catering Stockholm? Välkommen till Amore Catering! Vi är en liten cateringfirma med 30 års erfarenhet av att leverera högklassig och smarrig catering med allt från lättare maträtter, smörgåsar och wraps och vi jobbar med både privatpersoner och företag i Stockholmsområdet. Beställ din nästa catering hos oss!',
+      'Letar du efter catering i Stockholm för en fest, ett bröllop, en födelsedag, en familjesammankomst eller ett företagsevent? Amore Catering erbjuder ett brett sortiment av god mat för både privatpersoner och företag.',
     underDescription:
-      'Smörgåsar och wraps är enligt oss den perfekta cateringmaten. De går att anpassa för alla typer av evenemang, aptiter, smakriktningar och tider på dygnet och de går att variera i det oändliga. I vårt sortiment erbjuder vi bland annat både vegetariska och veganska wraps och smörgåsar för att det ska kunna passa alla. Hos oss kan du välja mellan allt från lunchmackor och wraps till lyxbakelser. Och så smörgåstårta, förstás! Dessutom får ni inte missa vår specialitet, italienska Gelato som tillverkas på simpla råvaror för att skapa en exklusiv och delikat produkt.',
-    meta: 'Professionell catering i Stockholm – allt från lunchmackor till lyxiga middagar för alla event.',
+      'Vi har ett särskilt utbud av italiensk mat och bufféer för dig som uppskattar goda smaker och vill bjuda dina gäster på något extra. Hos oss hittar du också smörgåstårtor, wraps, sallader och ett urval av läckra desserter. Ska du fira något speciellt? Välj bland våra vanliga tårtor och glasstårtor. Vi erbjuder även lunchcatering för företag och maträtter som kan anpassas för vegetarianer och veganer. Oavsett om du planerar en mindre lunch eller en större fest vill vi göra det enkelt för dig att beställa. Handla direkt i vår webbshop och välj mellan avhämtning och leverans. Har du frågor eller önskar en specialanpassad beställning? Kontakta oss gärna!',
+    meta: 'Amore Catering erbjuder catering i Stockholm med italiensk mat, bufféer, smörgåstårtor, företagsluncher, tårtor och desserter. Beställ online!',
     highlights: [
-      'Alla typer av event',
-      'Stockholmsövergripande',
-      'Samma dag leverans',
+      'Italiensk mat och bufféer',
+      'Smörgåstårtor, wraps och sallader',
+      'Företagsluncher, tårtor och anpassade veganska rätter',
     ],
   },
 ];
